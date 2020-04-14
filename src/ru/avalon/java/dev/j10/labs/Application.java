@@ -1,5 +1,6 @@
 package ru.avalon.java.dev.j10.labs;
 
+import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.Date;
 
@@ -13,7 +14,7 @@ public class Application {
          * чтобы он содержал 20 строк, расположенных не
          * по порядку.
          */
-	    String[] strings = new String [] {"Soda","Logka" ,"Foto", "Dom", "fant", "persona", "koshka", "kolos", "los", "papka",
+	    String[] strings = {"Soda","Logka" ,"Foto", "Dom", "fant", "persona", "koshka", "kolos", "los", "papka",
 		"gorod", "glas", "lokon", "woda", "vrema", "film", "dog", "lowad", "angel", "dogd"} ;
 
 	    /*
@@ -24,27 +25,26 @@ public class Application {
 	     * 2. Проинициализируйте массив persons 20
 	     *    экземплярыми созданного класса.
 	     */
-	    Person[] persons = new Persons[20];
-	    persons[0] = new Persons("Ваня", 2005, 2, 3);
-	    persons[1] = new Persons("Ира", 2000, 12, 1);
-		persons[2] = new Persons("Катя", 2000, 1, 25);
-		persons[3] = new Persons("Миша", 1987, 2, 5);
-		persons[4] = new Persons("Ваня", 1985, 6, 30);
-		persons[5] = new Persons("Женя", 2000, 4, 9);
-		persons[6] = new Persons("Ира", 2005, 9, 23);
-		persons[7] = new Persons("Слава", 2009, 2, 9);
-		persons[8] = new Persons("Алена", 2010, 2, 19);
-		persons[9] = new Persons("Гриша", 2014, 3, 16);
-		persons[10] = new Persons("Ваня", 2019, 11, 7);
-		persons[11] = new Persons("Алена", 2000, 7, 1);
-		persons[12] = new Persons("Ира", 1986, 4, 6);
-		persons[13] = new Persons("Миша", 1850, 9, 9);
-		persons[14] = new Persons("Петя", 1987, 4, 17);
-		persons[15] = new Persons("Света", 1899, 7, 15);
-		persons[16] = new Persons("Женя", 2000, 6, 19);
-		persons[17] = new Persons("Боря", 2001, 9, 4);
-		persons[18] = new Persons("Яна", 2003, 8, 3);
-		persons[19] = new Persons("Ксюша", 2008, 3, 7);
+	    Person[] persons = {new Persons("Ваня", LocalDate.of(2000,11,2)),
+	    new Persons("Ира", LocalDate.of(2000, 12, 1)),
+		new Persons("Катя", LocalDate.of(2000, 1, 25)),
+		new Persons("Миша", LocalDate.of(1987, 2, 5)),
+		new Persons("Ваня", LocalDate.of(1985, 6, 30)),
+		new Persons("Женя", LocalDate.of(2000, 4, 9)),
+		new Persons("Ира", LocalDate.of(2005, 9, 23)),
+		new Persons("Слава", LocalDate.of(2009, 2, 9)),
+		new Persons("Алена", LocalDate.of(2010, 2, 19)),
+		new Persons("Гриша", LocalDate.of(2014, 3, 16)),
+		new Persons("Ваня", LocalDate.of(2019, 11, 7)),
+		new Persons("Алена", LocalDate.of(2000, 7, 1)),
+		new Persons("Ира", LocalDate.of(1986, 4, 6)),
+		new Persons("Миша", LocalDate.of(1850, 9, 9)),
+		new Persons("Петя", LocalDate.of(1987, 4, 17)),
+		new Persons("Света", LocalDate.of(1899, 7, 15)),
+		new Persons("Женя", LocalDate.of(1987, 6, 19)),
+		new Persons("Боря", LocalDate.of(2001, 9, 4)),
+		new Persons("Яна", LocalDate.of(2003, 8, 3)),
+		new Persons("Ксюша", LocalDate.of(2008, 3, 7))};
 
 
 

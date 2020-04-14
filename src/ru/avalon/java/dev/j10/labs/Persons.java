@@ -1,42 +1,35 @@
 package ru.avalon.java.dev.j10.labs;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+
+import java.time.LocalDate;
+
 
 public class Persons implements Person{
     private String name;
-    private Date birthDate;
+    private LocalDate birthDate;
 
 
 
     @Override
     public String toString() {
-        SimpleDateFormat formatDate = new SimpleDateFormat("dd MM yyyy");
-        Date birthd = birthDate;
-        birthd.setYear(birthDate.getYear()-1900);
-        birthd.setMonth(birthDate.getMonth()-1);
 
         return "Persons{" +
                 "name='" + name + '\'' +
-                ", birthDate: " + formatDate.format(birthd) +
+                ", birthDate: " + birthDate +
                 '}';
     }
 
-
-    public Persons(String name, int year, int mouth, int day) {
+    public Persons(String name, LocalDate birthDate) {
         this.name = name;
-        this.birthDate = new Date(year,mouth,day);
+        this.birthDate = birthDate;
     }
+
 
     @Override
     public String getName() {
         return name;
     }
 
-    @Override
-    public Date getBirthDate() {
-        return birthDate;
-    }
 
     @Override
     public int compareTo(Object o) {
@@ -45,5 +38,10 @@ public class Persons implements Person{
             return birthDate.compareTo(persons.birthDate);
         }
         return name.compareTo(persons.name);
+    }
+
+    @Override
+    public LocalDate getBirthDate() {
+        return birthDate;
     }
 }
